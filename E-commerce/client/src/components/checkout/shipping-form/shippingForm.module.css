@@ -1,0 +1,32 @@
+.shippingForm {
+  background-color: var(--gray-900);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+
+.shippingForm input {
+  padding: var(--space-sm);
+  border: 1px solid var(--gray-600);
+  background-color: var(--gray-800);
+  border-radius: var(--radius-sm);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.shippingForm input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.shippingForm button {
+  align-self: flex-end;
+  background-color: var(--success-color);
+  transition: background-color 0.3s ease;
+}
+
+.shippingForm button:hover {
+  background-color: var(--gray-700);
+}

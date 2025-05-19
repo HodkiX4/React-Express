@@ -1,0 +1,24 @@
+.cartSummary {
+  background-color: var(--gray-900);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--gray-700);
+  padding-bottom: var(--space-xs);
+  margin-bottom: var(--space-xs);
+}
+
+.total {
+  font-weight: bold;
+  color: var(--accent-color);
+  text-align: right;
+  margin-top: var(--space-sm);
+}

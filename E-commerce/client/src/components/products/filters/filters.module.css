@@ -1,0 +1,61 @@
+/* Store Filters */
+.filters {
+  display: flex;
+  gap: var(--gap-md);
+  padding: var(--space-md);
+  background-color: var(--gray-800);
+  border-radius: var(--radius-lg);
+  box-shadow: 0px 4px 10px -4px var(--shadow);
+}
+
+/* Input Search Field */
+.filters input {
+  width: 100%;
+  max-width: 300px;
+  padding: var(--space-sm) var(--space-md);
+  font-size: 1rem;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--gray-600);
+  background-color: var(--gray-900);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.filters input:focus {
+  border-color: var(--gray-100);
+  outline: none;
+  box-shadow: 0 0 5px var(--shadow);
+}
+
+/* Dropdown Filters (Category and Sort Order) */
+.filters select {
+  width: 100%;
+  max-width: 200px;
+  padding: var(--space-sm) var(--space-md);
+  font-size: 1rem;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--gray-600);
+  background-color: var(--gray-900);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.filters select:focus {
+  border-color: var(--gray-100);
+  outline: none;
+  box-shadow: 0 0 5px var(--shadow);
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filters input,
+  .filters select {
+    max-width: 100%;
+    margin-bottom: 1em;
+  }
+}

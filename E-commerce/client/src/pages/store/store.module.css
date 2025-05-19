@@ -1,0 +1,31 @@
+.storePage {
+  padding: var(--gap-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  /* Styles for small tablets and larger */
+}
+
+@media (min-width: 768px) {
+  /* Styles for tablets and larger */
+}
+
+@media (min-width: 1024px) {
+  /* Styles for laptops and larger */
+}
+
+@media (min-width: 1200px) {
+  /* Styles for desktops and larger */
+}
+
+@media (min-width: 1440px) {
+  /* Styles for large screens */
+}
+
+@media (min-width: 1600px) {
+  /* Styles for extra-large screens */
+}

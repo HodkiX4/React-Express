@@ -1,0 +1,231 @@
+/* === Responsive Design (Mobile First) === */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gray-900);
+  padding: var(--space-xs) var(--space-md);
+
+}
+
+.title h2 {
+  font-size: 1.8rem;
+}
+
+.title h2 span {
+  color: var(--text-color);
+  letter-spacing: 2px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: flex;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text-color);
+  background: none;
+  border: none;
+}
+
+/* Public links (Navigation) */
+.public {
+  display: none;
+  flex-direction: column;
+  gap: var(--gap-xs);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--gray-900);
+  padding: var(--space-sm);
+  box-shadow: 0px 4px 10px -4px var(--shadow);
+  transition: all 0.3s ease-in-out;
+}
+
+.public a {
+  font-size: 1.4rem;
+}
+.public.active {
+  display: flex;
+}
+
+
+
+/* Session (Login/Profile) */
+.session {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-md);
+}
+
+.session span {
+  display: none;
+  font-size: 0.6rem;
+}
+
+.session a {
+  display: flex;
+  border-radius: var(--radius-round);
+  color: var(--text-color);
+  background-color: var(--gray-800);
+  font-size: 1.6rem;
+  padding: var(--space-xs);
+
+  &:hover {
+    outline: 2px solid var(--primary-color);
+    transition: outline 75ms;
+  }
+
+  &:global(.active) svg {
+    fill: var(--primary-color);
+  }
+}
+
+
+/* Logout button */
+.logout {
+  position: relative;
+  background-color: var(--error-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 1.2rem;
+  margin-left: var(--space-xs);
+}
+
+.logout:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 12px -4px var(--shadow);
+}
+
+.logout:active {
+  transform: scale(0.95);
+}
+
+/* Small devices (Tablets, 600px and up) */
+@media (min-width: 600px) {
+  .navbar {
+    padding: var(--space-md) var(--space-xl);
+  }
+
+  .title h2 {
+    font-size: 1.2rem;
+  }
+  .public {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .public a {
+    display: flex;
+    align-items: center;
+    transition: color 0.2s ease-in-out;
+    position: relative;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  
+    gap: var(--gap-xxs);
+    font-size: 0.8rem;
+    padding: var(--space-xxs);
+  
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      border-radius: 2px;
+      background-color: var(--primary-color);
+      transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    }
+    
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 0;
+      height: 3px;
+      border-radius: 2px;
+      background-color: var(--primary-color);
+      transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    }
+  
+    &:hover::after,
+    &:hover::before {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  .session span {
+    display: inline;
+  }
+
+  .session a {
+    font-size: 1rem;
+  }
+  .logout {
+    font-size: .9rem;
+  }
+}
+
+/* Medium devices (Laptops, 768px and up) */
+@media (min-width: 768px) {
+  .public a {
+    font-size: 1.1rem;
+  }
+
+  .title h2 {
+    font-size: 1.4rem;
+  }
+
+  .session span {
+    font-size: 0.9rem;
+  }
+
+  .session a {
+    font-size: 1.1rem;
+  }
+
+}
+
+/* Large devices (Desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  .public {
+    gap: var(--gap-xl);
+  }
+
+  .title h2 {
+    font-size: 1.5rem;
+  }
+
+  .logout {
+    font-size: 1rem;
+    margin-left: var(--space-xl);
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Extra Large screens (1440px and up) */
+@media (min-width: 1440px) {
+  .title h2 {
+    font-size: 1.75rem;
+  }
+}
